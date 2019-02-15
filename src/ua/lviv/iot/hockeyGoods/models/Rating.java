@@ -1,12 +1,16 @@
 package ua.lviv.iot.hockeyGoods.models;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Rating {
 
+	public static final int MIN_MARK = 0;
+	public static final int MAX_MARK = 5;
+
 	private double averageMark;
-	private List<Integer> listOfMarks;
+	private List<Integer> listOfMarks = new ArrayList<Integer>();
 
 	public Rating(List<Integer> marks) {
 		this.listOfMarks = marks;
@@ -14,11 +18,11 @@ public class Rating {
 	}
 
 	public Rating() {
-		this.listOfMarks = new LinkedList<Integer>();
+
 	}
 
 	public void addMark(Integer mark) {
-		if (mark > 5 || mark < 0) {
+		if (mark < MIN_MARK || mark > MAX_MARK) {
 			return;
 		} else {
 			this.listOfMarks.add(mark);

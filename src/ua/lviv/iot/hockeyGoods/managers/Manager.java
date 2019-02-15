@@ -13,7 +13,7 @@ public class Manager implements ManagerInterface {
 	private List<HockeyGood> hockeyGoodsList;
 
 	public Manager() {
-		this(new LinkedList<HockeyGood>());
+
 	}
 
 	public Manager(List<HockeyGood> hockeyGoodsList) {
@@ -44,7 +44,6 @@ public class Manager implements ManagerInterface {
 	public List<HockeyGood> sortByRating(List<HockeyGood> listToSort, SortingWay sortingWay) {
 		Comparator<HockeyGood> ratingComparator = (o1, o2) -> ((Double) o1.getRating().getAverageMark())
 				.compareTo(o2.getRating().getAverageMark());
-
 		if (sortingWay == SortingWay.ASCENDING) {
 			listToSort.sort(ratingComparator);
 		} else {
@@ -64,16 +63,6 @@ public class Manager implements ManagerInterface {
 		return filteredList;
 	}
 
-	@Override
-	public void addGood(HockeyGood good) {
-		this.hockeyGoodsList.add(good);
-	}
-	
-	@Override
-	public void addListOfGoods(List<HockeyGood> listOfGoods) {
-		listOfGoods.forEach((good)->this.addGood(good));
-	}
-
 	public List<HockeyGood> getHockeyGoodsList() {
 		return hockeyGoodsList;
 	}
@@ -81,7 +70,5 @@ public class Manager implements ManagerInterface {
 	public void setHockeyGoodsList(List<HockeyGood> hockeyGoodsList) {
 		this.hockeyGoodsList = hockeyGoodsList;
 	}
-
-	
 
 }

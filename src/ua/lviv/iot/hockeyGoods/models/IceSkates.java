@@ -6,11 +6,11 @@ public class IceSkates extends HockeyGood {
 	private String model;
 
 	public IceSkates() {
-		this(0, null, null, null, null, null, 0, null);
+
 	}
 
-	public IceSkates(double price, String producerName, Age userAge, ProfessionalLevel professionalLevel, PlayerType playerType,
-			Rating rating, int footSize, String model) {
+	public IceSkates(double price, String producerName, Age userAge, ProfessionalLevel professionalLevel,
+			PlayerType playerType, Rating rating, int footSize, String model) {
 		super(price, producerName, userAge, professionalLevel, playerType, rating);
 		this.footSize = footSize;
 		this.model = model;

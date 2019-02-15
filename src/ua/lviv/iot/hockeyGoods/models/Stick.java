@@ -6,7 +6,7 @@ public class Stick extends HockeyGood {
 	private double weight;
 
 	public Stick() {
-		this(0, null, null, null, null, null, null, 0);
+
 	}
 
 	public Stick(double price, String producerName, Age userAge, ProfessionalLevel professionalLevel, Rating rating,
@@ -17,11 +17,9 @@ public class Stick extends HockeyGood {
 		this.weight = weight;
 	}
 
-	
 	@Override
 	public String toString() {
-		return "\nStick\n" + super.toString() + "\nMaterial: " + material + 
-				"\nWeight: " + weight + "kg\n";
+		return "\nStick\n" + super.toString() + "\nMaterial: " + material + "\nWeight: " + weight + "kg\n";
 	}
 
 	public String getMaterial() {

@@ -8,8 +8,8 @@ import ua.lviv.iot.hockeyGoods.models.SortingWay;
 public interface ManagerInterface {
 
 	public abstract List<HockeyGood> sortByPrice(List<HockeyGood> listToSort, SortingWay sortingWay);
+
 	public abstract List<HockeyGood> sortByRating(List<HockeyGood> listToSort, SortingWay sortingWay);
+
 	public abstract List<HockeyGood> filterByPlayerType(List<HockeyGood> listToFilter, PlayerType playerType);
-	public abstract void addGood(HockeyGood good);
-	public abstract void addListOfGoods(List<HockeyGood> listOfGoods);
 }

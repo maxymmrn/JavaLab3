@@ -27,8 +27,8 @@ public abstract class HockeyGood {
 
 	@Override
 	public String toString() {
-		return "Price: " + price + "\nProducer name: " + producerName + "\nPlayer type: " + playerType +
-				"\nUser age: " + userAge + "\nProfessional level: " +  professionalLevel + rating.toString();
+		return "Price: " + price + "\nProducer name: " + producerName + "\nPlayer type: " + playerType + "\nUser age: "
+				+ userAge + "\nProfessional level: " + professionalLevel + rating.toString();
 	}
 
 	public double getPrice() {
@@ -70,7 +70,7 @@ public abstract class HockeyGood {
 	public void setRating(Rating rating) {
 		this.rating = rating;
 	}
-	
+
 	public PlayerType getPlayerType() {
 		return playerType;
 	}
