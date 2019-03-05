@@ -1,5 +1,6 @@
 package ua.lviv.iot.hockeyGoods.managers;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,7 +11,7 @@ import ua.lviv.iot.hockeyGoods.models.SortingWay;
 
 public class Manager implements ManagerInterface {
 
-    private List<HockeyGood> hockeyGoodsList;
+    private List<HockeyGood> hockeyGoodsList =  new ArrayList<HockeyGood>();
 
     public Manager() {
 
@@ -27,6 +28,14 @@ public class Manager implements ManagerInterface {
             info.append(hockeyGood.toString());
         }
         return info + "\n";
+    }
+
+    public final void addGood(final HockeyGood good) {
+        this.hockeyGoodsList.add(good);
+    }
+
+    public final void addListOfGood(final List<HockeyGood> lst) {
+        lst.forEach(good -> this.addGood(good));
     }
 
 

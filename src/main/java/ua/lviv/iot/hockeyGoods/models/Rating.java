@@ -29,7 +29,11 @@ public class Rating {
         }
     }
 
-    private double calculateAverageMark() {
+    public final void addListOfMarks(final List<Integer> marks) {
+        marks.forEach(mark -> this.addMark(mark));
+    }
+
+    public final double calculateAverageMark() {
         double buffer = 0.0;
         int length = this.listOfMarks.size();
 
@@ -37,7 +41,7 @@ public class Rating {
             buffer += mark;
         }
 
-        return (buffer / length);
+        return buffer / length;
     }
 
     @Override
