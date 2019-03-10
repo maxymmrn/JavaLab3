@@ -25,6 +25,16 @@ public class Protection extends HockeyGood {
             + super.toString()
             + "\nProtection type: " + protectionType + "\n";
     }
+    
+    @Override
+    public String getHeaders() {
+		return super.getHeaders() + ",protectionType";
+	}
+    
+    public String toCSV() {
+		return super.toCSV() + "," + this.getProtectionType();
+	}
+
 
     public final ProtectionType getProtectionType() {
         return protectionType;

@@ -25,6 +25,15 @@ public class IceSkates extends HockeyGood {
             + super.toString()
             + "\nFoot Size: " + footSize + "\n";
     }
+    
+    @Override
+    public String getHeaders() {
+		return super.getHeaders() + ",footSize";
+	}
+
+    public String toCSV() {
+		return super.toCSV() + "," + this.getFootSize();
+	}
 
     public final int getFootSize() {
         return footSize;

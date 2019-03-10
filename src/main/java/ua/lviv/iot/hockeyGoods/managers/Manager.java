@@ -14,8 +14,8 @@ public class Manager implements ManagerInterface {
     private List<HockeyGood> hockeyGoodsList =  new ArrayList<HockeyGood>();
 
     public Manager() {
-
-    }
+		
+	}
 
     public Manager(final List<HockeyGood> hockeyGoodsList) {
         this.hockeyGoodsList = hockeyGoodsList;
