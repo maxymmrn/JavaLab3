@@ -38,7 +38,7 @@ public abstract class HockeyGood {
     }
     
     public String getHeaders() {
-		return "sep=,price,producerName,playerType,userAge,professionalLevel,rating";
+		return "price,producerName,playerType,userAge,professionalLevel,rating";
 	}
     
     public String toCSV() {

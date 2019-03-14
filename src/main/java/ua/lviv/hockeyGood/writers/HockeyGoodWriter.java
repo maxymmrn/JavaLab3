@@ -12,22 +12,17 @@ import ua.lviv.iot.hockeyGoods.models.HockeyGood;
 public class HockeyGoodWriter {
 	
 	public void writeToFile(List<HockeyGood> hockeyGoodsList) 
-                throws IOException{
-		
+                throws IOException {
+
 		File fileForHockeyGoods = new File("HockeyGoods.csv");
 	    try(FileOutputStream fos = new FileOutputStream(fileForHockeyGoods);
 	            OutputStreamWriter osw = new OutputStreamWriter(fos);
 	            BufferedWriter writer = new BufferedWriter(osw)) {
 	    	
-	    	hockeyGoodsList.forEach(good -> {
-	    		try {
+	    	for (HockeyGood good : hockeyGoodsList)  {
 	    			writer.write(good.getHeaders() + "\n");
 	    			writer.write(good.toCSV() + "\n");
-	    		} catch (IOException e) {}
-	    	});
-	    	
-	    } finally {
-			System.out.println("Done");
+	    	};
 		}
 	}
 

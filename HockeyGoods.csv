@@ -1,16 +1,16 @@
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,footSize
+price,producerName,playerType,userAge,professionalLevel,rating,footSize
 250.0,No Data,FIELDPLAYER,KID,AMATEUR,2.0,37
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,footSize
+price,producerName,playerType,userAge,professionalLevel,rating,footSize
 700.0,Just Professional,FIELDPLAYER,SENIOR,PROFESSIONAL,4.75,39
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,protectionType
+price,producerName,playerType,userAge,professionalLevel,rating,protectionType
 400.0,No Data,GOALKEEPER,JUNIOR,AMATEUR,4.0,GLOVES
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,footSize
+price,producerName,playerType,userAge,professionalLevel,rating,footSize
 450.0,Retro Hockey,FIELDPLAYER,JUNIOR,HALFPROFESSIONAL,4.0,40
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,protectionType
+price,producerName,playerType,userAge,professionalLevel,rating,protectionType
 300.0,No Data,GOALKEEPER,JUNIOR,HALFPROFESSIONAL,4.0,SHOULDERS
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,protectionType
+price,producerName,playerType,userAge,professionalLevel,rating,protectionType
 575.0,Just Professional,GOALKEEPER,SENIOR,PROFESSIONAL,4.75,GLOVES
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,protectionType
+price,producerName,playerType,userAge,professionalLevel,rating,protectionType
 850.0,Strong For Strong,FIELDPLAYER,JUNIOR,HALFPROFESSIONAL,2.0,HELMET
-sep=,price,producerName,playerType,userAge,professionalLevel,rating,weight
+price,producerName,playerType,userAge,professionalLevel,rating,weight
 950.0,Wood Legend,FIELDPLAYER,SENIOR,HALFPROFESSIONAL,4.0,1.3

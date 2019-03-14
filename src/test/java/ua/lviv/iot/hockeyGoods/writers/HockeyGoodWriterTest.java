@@ -1,7 +1,6 @@
 package ua.lviv.iot.hockeyGoods.writers;
 
 import java.io.IOException;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ua.lviv.hockeyGood.writers.HockeyGoodWriter;
-import ua.lviv.iot.hockeyGoods.managers.Manager;
 import ua.lviv.iot.hockeyGoods.models.Age;
 import ua.lviv.iot.hockeyGoods.models.HockeyGood;
 import ua.lviv.iot.hockeyGoods.models.IceSkates;
@@ -21,7 +19,7 @@ import ua.lviv.iot.hockeyGoods.models.Rating;
 import ua.lviv.iot.hockeyGoods.models.Stick;
 
 public class HockeyGoodWriterTest {
-	
+
 	List<HockeyGood> list = new ArrayList<HockeyGood>();
 
 	@BeforeEach
@@ -87,12 +85,11 @@ public class HockeyGoodWriterTest {
         this.list.add(protectionForLegs);
         this.list.add(helmet);
         this.list.add(woodStick);
-        
 	}
-	
+
 	@Test
 	public void testWriteToFile() throws IOException {
 		HockeyGoodWriter writer = new HockeyGoodWriter();
-		writer.writeToFile(list);
+		writer.writeToFile(this.list);
 	}
 }

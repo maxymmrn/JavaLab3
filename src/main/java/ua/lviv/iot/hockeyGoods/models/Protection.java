@@ -31,6 +31,7 @@ public class Protection extends HockeyGood {
 		return super.getHeaders() + ",protectionType";
 	}
     
+    @Override
     public String toCSV() {
 		return super.toCSV() + "," + this.getProtectionType();
 	}
