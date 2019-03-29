@@ -1,7 +1,17 @@
 package ua.lviv.iot.hockeyGoods.models;
 
-public abstract class HockeyGood {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class HockeyGood {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	
     private double price;
     private String producerName;
 
@@ -9,7 +19,6 @@ public abstract class HockeyGood {
     private ProfessionalLevel professionalLevel;
     private PlayerType playerType;
 
-    private Rating rating;
 
     public HockeyGood() {
 
@@ -17,14 +26,13 @@ public abstract class HockeyGood {
 
     public HockeyGood(final double price, final String producerName,
             final Age userAge, final ProfessionalLevel professionalLevel,
-            final PlayerType playerType, final Rating rating) {
+            final PlayerType playerType) {
 
         this.price = price;
         this.producerName = producerName;
         this.userAge = userAge;
         this.professionalLevel = professionalLevel;
         this.playerType = playerType;
-        this.rating = rating;
     }
 
     @Override
@@ -33,8 +41,7 @@ public abstract class HockeyGood {
             + "\nProducer name: " + producerName
             + "\nPlayer type: " + playerType
             + "\nUser age: " + userAge
-            + "\nProfessional level: " + professionalLevel
-            + rating.toString();
+            + "\nProfessional level: " + professionalLevel;
     }
     
     public String getHeaders() {
@@ -46,8 +53,7 @@ public abstract class HockeyGood {
             this.getProducerName() + "," +
             this.getPlayerType() + "," +
             this.getUserAge() + "," +
-            this.getProfessionalLevel() + "," +
-            this.getRating().getAverageMark();
+            this.getProfessionalLevel();
 	}
 
     public final double getPrice() {
@@ -81,14 +87,6 @@ public abstract class HockeyGood {
     public final void setProfessionalLevel(
             final ProfessionalLevel professionalLevel) {
         this.professionalLevel = professionalLevel;
-    }
-
-    public final Rating getRating() {
-        return rating;
-    }
-
-    public final void setRating(final Rating rating) {
-        this.rating = rating;
     }
 
     public final PlayerType getPlayerType() {

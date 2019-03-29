@@ -46,7 +46,7 @@ public class Rating {
 
     @Override
     public final String toString() {
-        return "\nRating: " + averageMark;
+        return "\nRating: " + this.averageMark;
     }
 
     public final double getAverageMark() {
