@@ -14,10 +14,10 @@ public class Stick extends HockeyGood {
 
     public Stick(final double price, final String producerName,
             final Age userAge, final ProfessionalLevel professionalLevel,
-            final PlayerType playerType, final double weight) {
+            final PlayerType playerType, final Rating rating, final double weight) {
 
         super(price, producerName, userAge,
-                professionalLevel, playerType);
+                professionalLevel, playerType, rating);
         this.weight = weight;
     }
 

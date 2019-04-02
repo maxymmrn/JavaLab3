@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class HockeyGood {
+public abstract class HockeyGood {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +18,7 @@ public class HockeyGood {
     private Age userAge;
     private ProfessionalLevel professionalLevel;
     private PlayerType playerType;
+    private Rating rating;
 
 
     public HockeyGood() {
@@ -26,13 +27,14 @@ public class HockeyGood {
 
     public HockeyGood(final double price, final String producerName,
             final Age userAge, final ProfessionalLevel professionalLevel,
-            final PlayerType playerType) {
+            final PlayerType playerType, final Rating rating) {
 
         this.price = price;
         this.producerName = producerName;
         this.userAge = userAge;
         this.professionalLevel = professionalLevel;
         this.playerType = playerType;
+        this.rating = rating;
     }
 
     @Override
@@ -41,7 +43,8 @@ public class HockeyGood {
             + "\nProducer name: " + producerName
             + "\nPlayer type: " + playerType
             + "\nUser age: " + userAge
-            + "\nProfessional level: " + professionalLevel;
+            + "\nProfessional level: " + professionalLevel
+            + "\nRating: " + rating.toString();
     }
     
     public String getHeaders() {
@@ -96,5 +99,15 @@ public class HockeyGood {
     public final void setPlayerType(final PlayerType playerType) {
         this.playerType = playerType;
     }
+
+	public Rating getRating() {
+		return rating;
+	}
+
+	public void setRating(Rating rating) {
+		this.rating = rating;
+	}
+    
+    
 
 }

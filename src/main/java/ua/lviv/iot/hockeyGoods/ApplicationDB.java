@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import ua.lviv.iot.hockeyGoods.models.Age;
 import ua.lviv.iot.hockeyGoods.models.PlayerType;
 import ua.lviv.iot.hockeyGoods.models.ProfessionalLevel;
+import ua.lviv.iot.hockeyGoods.models.Rating;
 import ua.lviv.iot.hockeyGoods.models.Stick;
 
 @SpringBootApplication
@@ -19,12 +20,20 @@ public class ApplicationDB {
 
 	@Bean
 	public CommandLineRunner demo(HockeyGoodRepository repository) {
-        
+       Rating goodrate = new Rating();
+       goodrate.addMark(4);
+       goodrate.addMark(5);
+       goodrate.addMark(4);
+       
+       Rating badrate = new Rating();
+       badrate.addMark(4);
+       badrate.addMark(2);
+       badrate.addMark(3);
        return (args) -> {
            repository.save(new Stick(950, "Wood Legend", Age.SENIOR,
-                   ProfessionalLevel.HALFPROFESSIONAL, PlayerType.FIELDPLAYER, 1.3));
+                   ProfessionalLevel.HALFPROFESSIONAL, PlayerType.FIELDPLAYER, goodrate, 1.3));
            repository.save(new Stick(650, "Wood Legend", Age.SENIOR,
-                   ProfessionalLevel.AMATEUR, PlayerType.FIELDPLAYER, 1.5));
+                   ProfessionalLevel.AMATEUR, PlayerType.FIELDPLAYER, badrate, 1.5));
            
            repository.findAll().forEach(stick -> System.out.println(stick));
            

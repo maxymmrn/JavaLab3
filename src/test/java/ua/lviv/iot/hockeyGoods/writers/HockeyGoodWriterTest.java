@@ -45,36 +45,36 @@ public class HockeyGoodWriterTest {
 
         IceSkates oldSkates = new IceSkates(250, "No Data",
                 Age.KID, ProfessionalLevel.AMATEUR,
-                PlayerType.FIELDPLAYER, badRate, 37);
+                PlayerType.FIELDPLAYER, 37);
 
         IceSkates retroSkates = new IceSkates(450, "Retro Hockey",
                 Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
-                PlayerType.FIELDPLAYER, goodRate, 40);
+                PlayerType.FIELDPLAYER, 40);
 
         IceSkates proSkates = new IceSkates(700, "Just Professional",
                 Age.SENIOR, ProfessionalLevel.PROFESSIONAL,
-                PlayerType.FIELDPLAYER, superRate, 39);
+                PlayerType.FIELDPLAYER, 39);
 
 
         Protection oldGloves = new Protection(400, "No Data",
-                Age.JUNIOR, ProfessionalLevel.AMATEUR, niceRate,
+                Age.JUNIOR, ProfessionalLevel.AMATEUR,
                 ProtectionType.GLOVES, PlayerType.GOALKEEPER);
 
         Protection shoulders = new Protection(300, "No Data",
-                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL, goodRate,
+                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
                 ProtectionType.SHOULDERS, PlayerType.GOALKEEPER);
 
         Protection protectionForLegs = new Protection(575, "Just Professional",
-                Age.SENIOR, ProfessionalLevel.PROFESSIONAL, superRate,
+                Age.SENIOR, ProfessionalLevel.PROFESSIONAL,
                 ProtectionType.GLOVES, PlayerType.GOALKEEPER);
 
         HockeyGood helmet = new Protection(850, "Strong For Strong",
-                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL, badRate,
+                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
                 ProtectionType.HELMET, PlayerType.FIELDPLAYER);
 
 
         Stick woodStick = new Stick(950, "Wood Legend", Age.SENIOR,
-                ProfessionalLevel.HALFPROFESSIONAL, goodRate,
+                ProfessionalLevel.HALFPROFESSIONAL,
                 PlayerType.FIELDPLAYER, 1.3);
 
         this.list.add(oldSkates);

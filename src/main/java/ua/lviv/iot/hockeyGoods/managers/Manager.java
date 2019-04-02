@@ -57,24 +57,6 @@ public class Manager implements ManagerInterface {
 
 
     @Override
-    public final List<HockeyGood> sortByRating(
-            final List<HockeyGood> listToSort, final SortingWay sortingWay) {
-
-        Comparator<HockeyGood> ratingComparator = (o1, o2) ->
-            ((Double) o1.getRating().getAverageMark())
-                .compareTo(o2.getRating().getAverageMark());
-
-        if (sortingWay == SortingWay.ASCENDING) {
-            listToSort.sort(ratingComparator);
-        } else {
-            listToSort.sort(ratingComparator.reversed());
-        }
-
-        return listToSort;
-    }
-
-
-    @Override
     public final List<HockeyGood> findGoodsByPlayerType(
                 final PlayerType playerType) {
         List<HockeyGood> filteredList = new LinkedList<HockeyGood>();
