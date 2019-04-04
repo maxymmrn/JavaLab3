@@ -26,15 +26,6 @@ public class Stick extends HockeyGood {
         + super.toString()
         + "\nWeight: " + weight + "kg\n";
     }
- 
-    @Override
-    public String getHeaders() {
-		return super.getHeaders() + ",weight";
-	}
-
-    public String toCSV() {
-		return super.toCSV() + "," + this.getWeight();
-	}
 
     public final double getWeight() {
         return weight;

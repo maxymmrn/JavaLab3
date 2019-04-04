@@ -54,18 +54,6 @@ public abstract class HockeyGood {
             + "\nProfessional level: " + professionalLevel
             + "\nRating: " + rating.toString();
     }
-    
-    public String getHeaders() {
-		return "price,producerName,playerType,userAge,professionalLevel,rating";
-	}
-    
-    public String toCSV() {
-		return this.getPrice() + "," +
-            this.getProducerName() + "," +
-            this.getPlayerType() + "," +
-            this.getUserAge() + "," +
-            this.getProfessionalLevel();
-	}
 
     public final double getPrice() {
         return price;
