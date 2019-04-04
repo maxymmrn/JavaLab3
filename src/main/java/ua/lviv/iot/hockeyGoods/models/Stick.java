@@ -1,8 +1,10 @@
 package ua.lviv.iot.hockeyGoods.models;
 
-public class Stick extends HockeyGood {
+import javax.persistence.Entity;
 
-    private String material;
+@Entity
+public class Stick extends HockeyGood {
+	
     private double weight;
 
     public Stick() {
@@ -11,8 +13,7 @@ public class Stick extends HockeyGood {
 
     public Stick(final double price, final String producerName,
             final Age userAge, final ProfessionalLevel professionalLevel,
-            final Rating rating, final PlayerType playerType,
-            final double weight) {
+            final PlayerType playerType, final Rating rating, final double weight) {
 
         super(price, producerName, userAge,
                 professionalLevel, playerType, rating);
@@ -25,14 +26,15 @@ public class Stick extends HockeyGood {
         + super.toString()
         + "\nWeight: " + weight + "kg\n";
     }
+ 
+    @Override
+    public String getHeaders() {
+		return super.getHeaders() + ",weight";
+	}
 
-    public final String getMaterial() {
-        return material;
-    }
-
-    public final void setMaterial(final String material) {
-        this.material = material;
-    }
+    public String toCSV() {
+		return super.toCSV() + "," + this.getWeight();
+	}
 
     public final double getWeight() {
         return weight;

@@ -1,2 +1,4 @@
 ua\lviv\iot\hockeyGoods\managers\ManagerTest.class
+ua\lviv\iot\db\DbApplicationTests.class
 ua\lviv\iot\hockeyGoods\models\RatingTest.class
+ua\lviv\iot\hockeyGoods\writers\HockeyGoodWriterTest.class

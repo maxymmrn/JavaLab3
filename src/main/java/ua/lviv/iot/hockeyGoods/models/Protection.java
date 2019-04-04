@@ -11,8 +11,7 @@ public class Protection extends HockeyGood {
 
     public Protection(final double price, final String producerName,
             final Age userAge, final ProfessionalLevel professionalLevel,
-            final Rating rating, final ProtectionType protectionType,
-            final PlayerType playerType) {
+            final ProtectionType protectionType, final PlayerType playerType, final Rating rating) {
 
         super(price, producerName, userAge,
                 professionalLevel, playerType, rating);
@@ -25,6 +24,17 @@ public class Protection extends HockeyGood {
             + super.toString()
             + "\nProtection type: " + protectionType + "\n";
     }
+    
+    @Override
+    public String getHeaders() {
+		return super.getHeaders() + ",protectionType";
+	}
+    
+    @Override
+    public String toCSV() {
+		return super.toCSV() + "," + this.getProtectionType();
+	}
+
 
     public final ProtectionType getProtectionType() {
         return protectionType;
