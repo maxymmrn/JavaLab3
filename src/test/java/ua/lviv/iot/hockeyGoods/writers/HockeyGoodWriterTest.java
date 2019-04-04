@@ -45,37 +45,37 @@ public class HockeyGoodWriterTest {
 
         IceSkates oldSkates = new IceSkates(250, "No Data",
                 Age.KID, ProfessionalLevel.AMATEUR,
-                PlayerType.FIELDPLAYER, 37);
+                PlayerType.FIELDPLAYER, goodRate, 37);
 
         IceSkates retroSkates = new IceSkates(450, "Retro Hockey",
                 Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
-                PlayerType.FIELDPLAYER, 40);
+                PlayerType.FIELDPLAYER, superRate, 40);
 
         IceSkates proSkates = new IceSkates(700, "Just Professional",
                 Age.SENIOR, ProfessionalLevel.PROFESSIONAL,
-                PlayerType.FIELDPLAYER, 39);
+                PlayerType.FIELDPLAYER, niceRate, 39);
 
 
         Protection oldGloves = new Protection(400, "No Data",
                 Age.JUNIOR, ProfessionalLevel.AMATEUR,
-                ProtectionType.GLOVES, PlayerType.GOALKEEPER);
+                ProtectionType.GLOVES, PlayerType.GOALKEEPER, goodRate);
 
         Protection shoulders = new Protection(300, "No Data",
                 Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
-                ProtectionType.SHOULDERS, PlayerType.GOALKEEPER);
+                ProtectionType.SHOULDERS, PlayerType.GOALKEEPER, goodRate);
 
         Protection protectionForLegs = new Protection(575, "Just Professional",
                 Age.SENIOR, ProfessionalLevel.PROFESSIONAL,
-                ProtectionType.GLOVES, PlayerType.GOALKEEPER);
+                ProtectionType.GLOVES, PlayerType.GOALKEEPER, niceRate);
 
         HockeyGood helmet = new Protection(850, "Strong For Strong",
                 Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
-                ProtectionType.HELMET, PlayerType.FIELDPLAYER);
+                ProtectionType.HELMET, PlayerType.FIELDPLAYER, badRate);
 
 
         Stick woodStick = new Stick(950, "Wood Legend", Age.SENIOR,
-                ProfessionalLevel.HALFPROFESSIONAL,
-                PlayerType.FIELDPLAYER, 1.3);
+                ProfessionalLevel.HALFPROFESSIONAL, 
+                PlayerType.FIELDPLAYER, niceRate, 1.3);
 
         this.list.add(oldSkates);
         this.list.add(proSkates);

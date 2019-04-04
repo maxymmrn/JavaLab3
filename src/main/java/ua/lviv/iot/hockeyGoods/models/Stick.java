@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 @Entity
 public class Stick extends HockeyGood {
 	
-    private String material;
     private double weight;
 
     public Stick() {
@@ -36,14 +35,6 @@ public class Stick extends HockeyGood {
     public String toCSV() {
 		return super.toCSV() + "," + this.getWeight();
 	}
-
-    public final String getMaterial() {
-        return material;
-    }
-
-    public final void setMaterial(final String material) {
-        this.material = material;
-    }
 
     public final double getWeight() {
         return weight;
