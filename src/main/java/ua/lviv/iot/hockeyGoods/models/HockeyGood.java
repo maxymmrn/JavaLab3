@@ -1,15 +1,33 @@
 package ua.lviv.iot.hockeyGoods.models;
 
-public abstract class HockeyGood {
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public abstract class HockeyGood {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	
     private double price;
     private String producerName;
-
+    
+    @Enumerated(EnumType.STRING)
     private Age userAge;
+    @Enumerated(EnumType.STRING)
     private ProfessionalLevel professionalLevel;
+    @Enumerated(EnumType.STRING)
     private PlayerType playerType;
-
+    
+    @Embedded
     private Rating rating;
+
 
     public HockeyGood() {
 
@@ -34,7 +52,7 @@ public abstract class HockeyGood {
             + "\nPlayer type: " + playerType
             + "\nUser age: " + userAge
             + "\nProfessional level: " + professionalLevel
-            + rating.toString();
+            + "\nRating: " + rating.toString();
     }
 
     public final double getPrice() {
@@ -70,13 +88,6 @@ public abstract class HockeyGood {
         this.professionalLevel = professionalLevel;
     }
 
-    public final Rating getRating() {
-        return rating;
-    }
-
-    public final void setRating(final Rating rating) {
-        this.rating = rating;
-    }
 
     public final PlayerType getPlayerType() {
         return playerType;
@@ -86,4 +97,12 @@ public abstract class HockeyGood {
         this.playerType = playerType;
     }
 
+	public Rating getRating() {
+		return rating;
+	}
+
+	public void setRating(Rating rating) {
+		this.rating = rating;
+	}
+    
 }

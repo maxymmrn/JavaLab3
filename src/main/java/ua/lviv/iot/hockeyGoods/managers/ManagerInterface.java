@@ -11,8 +11,5 @@ public interface ManagerInterface {
     List<HockeyGood> sortByPrice(List<HockeyGood> listToSort,
             SortingWay sortingWay);
 
-    List<HockeyGood> sortByRating(List<HockeyGood> listToSort,
-            SortingWay sortingWay);
-
     List<HockeyGood> findGoodsByPlayerType(PlayerType playerType);
 }

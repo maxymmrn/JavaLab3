@@ -11,8 +11,7 @@ public class IceSkates extends HockeyGood {
 
     public IceSkates(final double price, final String producerName,
             final Age userAge, final ProfessionalLevel professionalLevel,
-            final PlayerType playerType, final Rating rating,
-            final int footSize) {
+            final PlayerType playerType, final Rating rating, final int footSize) {
 
         super(price, producerName, userAge,
                 professionalLevel, playerType, rating);
@@ -25,7 +24,7 @@ public class IceSkates extends HockeyGood {
             + super.toString()
             + "\nFoot Size: " + footSize + "\n";
     }
-
+    
     public final int getFootSize() {
         return footSize;
     }

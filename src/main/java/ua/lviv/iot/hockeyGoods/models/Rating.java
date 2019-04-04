@@ -3,12 +3,18 @@ package ua.lviv.iot.hockeyGoods.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Rating {
+import javax.persistence.ElementCollection;
+import javax.persistence.Embeddable;
 
+@Embeddable
+public class Rating{
+	
     public static final int MIN_MARK = 0;
     public static final int MAX_MARK = 5;
 
     private double averageMark;
+    
+    @ElementCollection
     private List<Integer> listOfMarks = new ArrayList<Integer>();
 
     public Rating(final List<Integer> marks) {
@@ -46,7 +52,7 @@ public class Rating {
 
     @Override
     public final String toString() {
-        return "\nRating: " + averageMark;
+        return "\nRating: " + this.averageMark;
     }
 
     public final double getAverageMark() {

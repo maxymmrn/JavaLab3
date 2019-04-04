@@ -45,37 +45,37 @@ public class ManagerTest {
 
         IceSkates oldSkates = new IceSkates(250, "No Data",
                 Age.KID, ProfessionalLevel.AMATEUR,
-                PlayerType.FIELDPLAYER, badRate, 37);
+                PlayerType.FIELDPLAYER, goodRate, 37);
 
         IceSkates retroSkates = new IceSkates(450, "Retro Hockey",
                 Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
-                PlayerType.FIELDPLAYER, goodRate, 40);
+                PlayerType.FIELDPLAYER, superRate, 40);
 
         IceSkates proSkates = new IceSkates(700, "Just Professional",
                 Age.SENIOR, ProfessionalLevel.PROFESSIONAL,
-                PlayerType.FIELDPLAYER, superRate, 39);
+                PlayerType.FIELDPLAYER, niceRate, 39);
 
 
         Protection oldGloves = new Protection(400, "No Data",
-                Age.JUNIOR, ProfessionalLevel.AMATEUR, niceRate,
-                ProtectionType.GLOVES, PlayerType.GOALKEEPER);
+                Age.JUNIOR, ProfessionalLevel.AMATEUR,
+                ProtectionType.GLOVES, PlayerType.GOALKEEPER, goodRate);
 
         Protection shoulders = new Protection(300, "No Data",
-                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL, goodRate,
-                ProtectionType.SHOULDERS, PlayerType.GOALKEEPER);
+                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
+                ProtectionType.SHOULDERS, PlayerType.GOALKEEPER, goodRate);
 
         Protection protectionForLegs = new Protection(575, "Just Professional",
-                Age.SENIOR, ProfessionalLevel.PROFESSIONAL, superRate,
-                ProtectionType.GLOVES, PlayerType.GOALKEEPER);
+                Age.SENIOR, ProfessionalLevel.PROFESSIONAL,
+                ProtectionType.GLOVES, PlayerType.GOALKEEPER, niceRate);
 
         HockeyGood helmet = new Protection(850, "Strong For Strong",
-                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL, badRate,
-                ProtectionType.HELMET, PlayerType.FIELDPLAYER);
+                Age.JUNIOR, ProfessionalLevel.HALFPROFESSIONAL,
+                ProtectionType.HELMET, PlayerType.FIELDPLAYER, badRate);
 
 
         Stick woodStick = new Stick(950, "Wood Legend", Age.SENIOR,
-                ProfessionalLevel.HALFPROFESSIONAL, goodRate,
-                PlayerType.FIELDPLAYER, 1.3);
+                ProfessionalLevel.HALFPROFESSIONAL, 
+                PlayerType.FIELDPLAYER, niceRate, 1.3);
         
         protectionForLegs.setUserAge(Age.JUNIOR);
         woodStick.setPrice(990);
@@ -94,7 +94,7 @@ public class ManagerTest {
         this.testManager.addGood(helmet);
         this.testManager.addGood(woodStick);
         this.testManager.addListOfGood(smallList);
-        
+
         Manager test = new Manager(smallList);
         smallList.add(protectionForLegs);
         test.setHockeyGoodsList(smallList);
@@ -112,19 +112,6 @@ public class ManagerTest {
 		sortedList = testManager.sortByPrice(testManager.getHockeyGoodsList(), SortingWay.DESCENDING);
 		assertEquals(250, sortedList.get(7).getPrice());
 		assertEquals(990, sortedList.get(0).getPrice());
-	}
-	
-	@Test 
-	public void testSortByRating() {
-		List<HockeyGood> sortedList = new ArrayList<HockeyGood>();
-		
-		sortedList = testManager.sortByRating(testManager.getHockeyGoodsList(), SortingWay.ASCENDING);
-		assertEquals(2, sortedList.get(0).getRating().getAverageMark());
-		assertEquals(4.75, sortedList.get(7).getRating().getAverageMark());
-		
-		sortedList = testManager.sortByRating(testManager.getHockeyGoodsList(), SortingWay.DESCENDING);
-		assertEquals(2, sortedList.get(7).getRating().getAverageMark());
-		assertEquals(4.75, sortedList.get(0).getRating().getAverageMark());
 	}
 	
 	@Test 
