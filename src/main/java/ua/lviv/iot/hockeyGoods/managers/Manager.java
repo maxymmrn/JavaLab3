@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
+import ua.lviv.iot.hockeyGoods.managers.ManagerInterface;
 import ua.lviv.iot.hockeyGoods.models.HockeyGood;
 import ua.lviv.iot.hockeyGoods.models.PlayerType;
 import ua.lviv.iot.hockeyGoods.models.SortingWay;

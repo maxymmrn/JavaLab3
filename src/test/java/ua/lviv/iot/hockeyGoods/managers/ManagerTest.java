@@ -94,7 +94,7 @@ public class ManagerTest {
         this.testManager.addGood(helmet);
         this.testManager.addGood(woodStick);
         this.testManager.addListOfGood(smallList);
-        
+
         Manager test = new Manager(smallList);
         smallList.add(protectionForLegs);
         test.setHockeyGoodsList(smallList);

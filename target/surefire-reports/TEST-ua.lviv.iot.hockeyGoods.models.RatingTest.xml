@@ -18,7 +18,7 @@
     <property name="user.country" value="UA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_192\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\FAD7~1\AppData\Local\Temp\surefire2387077807894975799\surefirebooter626509066030107964.jar C:\Users\Максим Маріна\AppData\Local\Temp\surefire2387077807894975799 2019-03-05T14-21-13_934-jvmRun1 surefire5088303568295859846tmp surefire_07951122009345255365tmp"/>
+    <property name="sun.java.command" value="C:\Users\FAD7~1\AppData\Local\Temp\surefire5483507449988521605\surefirebooter3383721458952798532.jar C:\Users\Максим Маріна\AppData\Local\Temp\surefire5483507449988521605 2019-03-10T21-31-43_843-jvmRun1 surefire5517163846093526616tmp surefire_04675500589430817909tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\Максим Маріна\Desktop\JavaLabs\Trying\JavaLab3\target\test-classes;C:\Users\Максим Маріна\Desktop\JavaLabs\Trying\JavaLab3\target\classes;C:\Users\Максим Маріна\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.0\junit-jupiter-api-5.4.0.jar;C:\Users\Максим Маріна\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Максим Маріна\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Максим Маріна\.m2\repository\org\junit\platform\junit-platform-commons\1.4.0\junit-platform-commons-1.4.0.jar;C:\Users\Максим Маріна\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.0\junit-jupiter-engine-5.4.0.jar;C:\Users\Максим Маріна\.m2\repository\org\junit\platform\junit-platform-engine\1.4.0\junit-platform-engine-1.4.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Максим Маріна"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\FAD7~1\AppData\Local\Temp\surefire2387077807894975799\surefirebooter626509066030107964.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\FAD7~1\AppData\Local\Temp\surefire5483507449988521605\surefirebooter3383721458952798532.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_192\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_192\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_192\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
